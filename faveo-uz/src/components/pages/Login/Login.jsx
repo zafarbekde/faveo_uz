@@ -4,9 +4,9 @@ import '../Login/login.css';
 
 function Login() {
     const emailRef = useRef();
-    const passwordRef = useRef(); 
+    const passwordRef = useRef();
 
-    
+
     const requestLogin = async () => {
         const url = 'http://faveo.uz:8080/api/v1/auth';
         const body = {
@@ -23,38 +23,37 @@ function Login() {
         }
     };
 
-    
+
 
     return (
-        
-            <div className="container-login">
-                <nav className="login-nav">
-                    <h1 className="login-title">Faveo</h1>
-                </nav>
+        <div className="container-login">
+            <nav className="login-nav">
+                <h1 className="login-title">Faveo</h1>
+            </nav>
 
-                <div className="login-wrap">
-                    <div className="login-form">
-                        <h1 className="login-form-title">Login</h1>
-                        <input
-                            ref={emailRef}
-                            className="login-form-email"
-                            type="email"
-                            placeholder="Email"
-                        />
-                        <input
-                            ref={passwordRef}
-                            className="login-form-password"
-                            type="password"
-                            placeholder="Password"
-                        />
-                        <button onClick={requestLogin} className="login-btn">
-                            Login
-                        </button>
-                        <button className="login-btn active">Register</button>
-                    </div>
+            <div className="login-wrap">
+                <div className="login-form">
+                    <h1 className="login-form-title">Login</h1>
+                    <input
+                        ref={emailRef}
+                        className="login-form-email"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <input
+                        ref={passwordRef}
+                        className="login-form-password"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <button onClick={requestLogin} className="login-btn">
+                        Login
+                    </button>
+                    <button className="login-btn active">Register</button>
                 </div>
             </div>
-       
+        </div>
+
     );
 }
 
