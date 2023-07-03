@@ -8,7 +8,7 @@ import HomePage from './components/pages/Home/HomePage.jsx'
 const rootRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to={"/home"}/> 
+    element: <Navigate to={"/login"}/> 
   },
   {
     path: "/login",
