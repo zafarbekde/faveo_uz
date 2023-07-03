@@ -1,0 +1,35 @@
+.loginContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .loginContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .loginContainer input[type="text"],
+  .loginContainer input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .loginButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #5FB2FF;
+    cursor: pointer;
+  }
+  
+  .loginButton:hover {
+    background-color: #45A6FF;
+  }
+  
