@@ -1,20 +1,12 @@
 import React, { useRef } from 'react';
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import axios from 'axios';
 import '../Login/login.css';
-import Register from '../Register/Register'
 
 function Login() {
     const emailRef = useRef();
-    const passwordRef = useRef();
-    const rootReg = () => {
-        createBrowserRouter([
-            {
-                path: "/register",
-                element: <Register />
-            }
-        ])
-    }
+    const passwordRef = useRef(); 
+
+    
     const requestLogin = async () => {
         const url = 'http://faveo.uz:8080/api/v1/auth';
         const body = {
@@ -34,7 +26,7 @@ function Login() {
     
 
     return (
-        <RouterProvider router={rootReg}>
+        
             <div className="container-login">
                 <nav className="login-nav">
                     <h1 className="login-title">Faveo</h1>
@@ -58,11 +50,11 @@ function Login() {
                         <button onClick={requestLogin} className="login-btn">
                             Login
                         </button>
-                        <button onClick={rootReg} className="login-btn active">Register</button>
+                        <button className="login-btn active">Register</button>
                     </div>
                 </div>
             </div>
-        </RouterProvider>
+       
     );
 }
 
