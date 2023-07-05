@@ -1,7 +1,27 @@
 import React from 'react'
+import { useQuery } from "react-query";
 import './ManageUser.css'
 
 function ManageUser() {
+
+  const fetchUsers = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    if (!response.ok) {
+      throw new Error('Failed to fetch users')
+    }
+    return response.json()
+  };
+
+  const { data: users, isLoading, isError } = useQuery('users', fetchUsers)
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (Error) {
+    return <div>Error occured while fetching users.</div>
+  }
+
   return (
     <div className='manage-container'>
       <div className="manage-wrap">
@@ -21,15 +41,17 @@ function ManageUser() {
               <th>Role</th>
               <th>Actions</th>
             </tr>
-            <tr className='manage-table-item'>
-              <td>1</td>
-              <td>jalol</td>
-              <td>Immomadinov</td>
-              <td>some@gmail.com</td>
-              <td>12.12.12</td>
-              <td>+9989456123</td>
-              <td>admin</td>
-            </tr>
+            {users.map((user) => (
+              <tr key={user.id} className='manage-table-item'>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
+                <td>{user.birhtday}</td>
+                <td>{user.phone}</td>
+                <td>{user.website}</td>
+              </tr>
+            ))}
           </table>
         </div>
       </div>
