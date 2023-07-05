@@ -1,0 +1,7 @@
+.manage-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: crimson;
+    height: 100vh;
+}
