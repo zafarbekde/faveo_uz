@@ -9,7 +9,6 @@ import ManageUser from './components/app/ManageUser/ManageUser.jsx'
 import Categories from './components/app/Categories/Categories.jsx'
 import Products from './components/app/Products/Products.jsx'
 import Orders from './components/app/Orders/Orders.jsx'
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 
 const rootRouter = createBrowserRouter([
   {
@@ -49,9 +48,7 @@ const rootRouter = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <RouterProvider router={rootRouter}>
-    <QueryClientProvider client={QueryClient}>
       <App />
-    </QueryClientProvider>
   </RouterProvider>
 
 )
