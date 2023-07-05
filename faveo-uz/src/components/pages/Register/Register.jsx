@@ -29,10 +29,10 @@ function Login() {
     }
   };
 
-  return (
+    return (
 
-    <div className="container-login">
-      <nav className="login-nav">
+      <div className="container-login">
+        <nav className="login-nav">
         <h1 className="login-title">Faveo</h1>
       </nav>
 
@@ -69,7 +69,7 @@ function Login() {
           <input
             ref={birthdayRef}
             className="login-form-email"
-            type="date"
+            type="text"
             placeholder="Birthday"
             
           />
