@@ -1,5 +1,7 @@
-  import React from 'react'
-  import './home.css'
+import React from 'react'
+import './home.css'
+import User from '../../assets/users.png'
+import Box from '../../assets/box.png'
 function HomePage() {
   return (
     <div className='home-container'>
@@ -9,12 +11,14 @@ function HomePage() {
         </nav>
 
         <div className="home-sidebar">
-          <ul className='home-sidebar-item'>
-            <li>Manage Users</li>
-            <li>Categories</li>
-            <li>Products</li>
-            <li>Orders</li>
-          </ul>
+          <div className="home-siderbar-ul">
+            <ul>
+              <li className='home-sidebar-item'> <img src={User} /> Manage Users</li>
+              <li className='home-sidebar-item'> <img src={Box} /> Categories</li>
+              <li className='home-sidebar-item'> <img src={Box} /> Products</li>
+              <li className='home-sidebar-item'> <img src={Box} /> Orders</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
