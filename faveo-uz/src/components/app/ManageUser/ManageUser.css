@@ -1,7 +1,42 @@
 .manage-container{
     width: 100%;
     display: flex;
-    justify-content: center;
-    background-color: crimson;
+    background-color: #fff;
     height: 100vh;
+    padding: 31px 54px;
+    font-family: sans-serif;
 }
+
+.manage-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.manage-table {
+    width: 1440px;
+    border-collapse: collapse;
+}
+
+table .manage-table-item {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    border-collapse: collapse;
+    height: 40px;
+    border-bottom: 1px solid #dedddd;
+    color: #7e7e7e;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+table .manage-table-head {
+    height: 40px;
+    border-collapse: collapse;
+    background-color: #e9e9e9;
+    text-align: center;
+    color: #7e7e7e;
+    font-size: 14px;
+    font-weight: 400;
+}
+
