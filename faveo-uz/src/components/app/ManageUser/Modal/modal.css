@@ -45,6 +45,9 @@
     border-radius: 5px;
 }
 
+.modal-head{
+    width: 100%;
+}
 .modal-btn {
     margin: 67px 20px;
 }

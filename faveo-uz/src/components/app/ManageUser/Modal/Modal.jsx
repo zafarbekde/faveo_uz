@@ -15,7 +15,6 @@ function Modal({ close }) {
     return (
         <div className='container-modal'>
             <div className="wrap-modal">
-                <h1 className='modal-title'>Personal Data</h1>
                 <div className="modal-close">
                     <button className='modal-close-btn' onClick={() => close()}> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -24,6 +23,10 @@ function Modal({ close }) {
                 </div>
 
                 <div className="modal-input">
+                    <div className='modal-head'>
+                        <h1 className='modal-title'>Personal Data</h1>
+
+                    </div>
                     <input
                         ref={emailRef}
                         type="email"
