@@ -40,3 +40,9 @@ table .manage-table-head {
     font-weight: 400;
 }
 
+.show-modal-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
