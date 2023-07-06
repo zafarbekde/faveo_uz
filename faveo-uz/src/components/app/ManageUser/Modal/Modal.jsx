@@ -4,7 +4,7 @@ import './modal.css'
 function Modal() {
   return (
     <div>
-      
+      dasdasda
     </div>
   )
 }
