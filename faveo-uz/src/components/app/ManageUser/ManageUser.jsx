@@ -85,7 +85,7 @@ function ManageUser() {
       </div>
 
       {
-        showModal && createPortal(<Modal />, document.getElementById("modal-root"))
+        showModal && createPortal(<Modal close={() => setShowModal(false)}/>, document.getElementById("modal-root"))
       }
     </>
   );
