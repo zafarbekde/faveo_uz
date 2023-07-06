@@ -1,4 +1,4 @@
-.container-modal{
+.container-modal {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -9,47 +9,102 @@
     background-color: #1313136B;
     height: 100vh;
     font-family: sans-serif;
-    
 }
 
-.wrap-modal{
+.modal-title {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.wrap-modal {
     width: 888px;
-    height: 574px;
-    padding: 26px 36px;    
+    display: flex;
+    flex-direction: column;
+    min-height: 574px;
+    padding: 26px 36px;
     background-color: #fff;
 }
 
-.modal-input{
-    padding: 31px;
+.modal-input {
+    padding: 21px;
     width: 100%;
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.modal-active{
+.modal-active {
     width: 235px;
     height: 39px;
-    padding: 12px;
+    padding: 0 12px;
     border: 2px solid #f5f5f5;
     outline: none;
     border-radius: 5px;
 }
 
-.modal-btn{
+.modal-btn {
     margin: 67px 20px;
 }
 
-.user-access{
+.user-access {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.user-access-wrap{
+.user-access-wrap {
     display: flex;
     padding: 19px 0;
-    gap: 22px;
+    gap: 50px;
 }
 
+.modal-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.delete-user-title {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.delete-user{
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+.delete-active {
+    
+    background: linear-gradient(#FF5F5F, #FF4545);
+
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    transition: all 0.5s ease;
+}
+
+.modal-close{
+    width: 100px;
+    display: flex;
+    justify-content: end;
+}
+.modal-close-btn{
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
