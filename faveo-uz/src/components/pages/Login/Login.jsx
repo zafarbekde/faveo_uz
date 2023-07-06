@@ -2,13 +2,12 @@ import React, { useRef } from 'react';
 import axios from 'axios';
 import '../Login/login.css';
 import {Link, Route, Routes} from "react-router-dom";
-import Register from '../Register/Register'
+import Inputs from '../../Inputs';
+
 
 function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
-
-
 
     const requestLogin = async () => {
         const url = 'http://faveo.uz:8080/api/v1/auth';
@@ -36,18 +35,8 @@ function Login() {
                 <div className="login-wrap">
                     <div className="login-form">
                         <h1 className="login-form-title">Login</h1>
-                        <input
-                            ref={emailRef}
-                            className="login-form-email"
-                            type="email"
-                            placeholder="Email"
-                        />
-                        <input
-                            ref={passwordRef}
-                            className="login-form-password"
-                            type="password"
-                            placeholder="Password"
-                        />
+                        <Inputs ref={emailRef} type="email" placeholder="Email"/>
+                        <Inputs ref={passwordRef} type="password" placeholder="Password"/>
                         <button onClick={requestLogin} className="login-btn">
                             Login
                         </button>

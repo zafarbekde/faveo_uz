@@ -55,11 +55,12 @@
     outline: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    
 }
+
 .login-btn:hover{
     background: linear-gradient(#383a3b, #383a3b);
-    transition: all 0.5s ease;
+    
 }
 
 .active{
@@ -67,6 +68,7 @@
     color: #4e4e4e;
     border: 1px solid #e0dbdb;
     font-weight: 600;
+    
 }
 
 .active:hover{

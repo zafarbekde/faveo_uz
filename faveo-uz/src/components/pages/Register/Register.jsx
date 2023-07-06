@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import '../Login/login.css';
 import { Link, Route, Routes } from "react-router-dom";
+import Inputs from '../../Inputs';
 
 
 function Login() {
@@ -39,44 +40,38 @@ function Login() {
       <div className="login-wrap">
         <div className="login-form">
           <h1 className="login-form-title">Register</h1>
-          <input
+          <Inputs
             ref={emailRef}
-            className="login-form-email"
             type="email"
             placeholder="Email"
           />
-          <input
+          <Inputs
             ref={passwordRef}
-            className="login-form-password"
             type="password"
             placeholder="Password"
           />
 
-          <input
+          <Inputs
             ref={userRef}
-            className="login-form-email"
             type="text"
             placeholder="Name"
           />
 
-          <input
+          <Inputs
             ref={surnameRef}
-            className="login-form-email"
             type="text"
             placeholder="Surname"
           />
 
-          <input
+          <Inputs
             ref={birthdayRef}
-            className="login-form-email"
             type="text"
             placeholder="Birthday"
             
           />
 
-          <input
+          <Inputs
             ref={phoneRef}
-            className="login-form-email"
             type="phone"
             placeholder="Phone"
           />
