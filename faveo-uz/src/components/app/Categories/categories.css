@@ -1,9 +1,7 @@
 .container-categories {
     width: 100%;
-    
     display: flex;
     justify-content: center;
-    
     font-family: sans-serif;
     background-color: #fff;
 }
@@ -35,14 +33,16 @@
 }
 
 .categories-product {
-    width: 290px;
-    height: 58px;
+    width: 94%;
+    min-height: 58px;
     border-radius: 5px;
-    background: #FBFBFB;
+    background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
+    gap: 30px;
 }
 
 .categories-product-head{
