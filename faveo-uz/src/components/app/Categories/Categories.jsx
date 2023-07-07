@@ -13,9 +13,14 @@ function Categories() {
         </div>
 
         <div className="categories-product">
-          <img className='categories-product-img' src={Vector} />
-          <span className="categories-product-title">Foods</span>
-          <button className='login-btn categories-active'><img src={Pen} /></button>
+          <div className="categories-product-head">
+            <img className='categories-product-img' src={Vector} />
+            <span className="categories-product-title">Foods</span>
+          </div>
+
+          <div className="categories-button">
+            <button className='login-btn categories-active'><img src={Pen} /></button>
+          </div>
         </div>
       </div>
     </div>
