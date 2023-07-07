@@ -1,5 +1,7 @@
 import React from 'react'
 import './categories.css'
+import Vector from '../../assets/vector.png'
+import Pen from '../../assets/pen.png'
 
 function Categories() {
   return (
@@ -11,7 +13,9 @@ function Categories() {
         </div>
 
         <div className="categories-product">
-            
+          <img className='categories-product-img' src={Vector} />
+          <span className="categories-product-title">Foods</span>
+          <button className='login-btn categories-active'><img src={Pen} /></button>
         </div>
       </div>
     </div>
