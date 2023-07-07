@@ -46,6 +46,12 @@
     border-radius: 5px;
 }
 
+.categories-modal-image{
+    width: 88px;
+    height: 89px;
+    object-fit: contain;
+}
+
 .categories-modal-input {
     display: flex;
     flex-direction: column;
