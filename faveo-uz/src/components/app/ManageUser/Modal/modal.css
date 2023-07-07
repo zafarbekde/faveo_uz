@@ -87,9 +87,7 @@
 }
 
 .delete-active {
-    
     background: linear-gradient(#FF5F5F, #FF4545);
-
     color: #FFF;
     text-align: center;
     font-size: 12px;

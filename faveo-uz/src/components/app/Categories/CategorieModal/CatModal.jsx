@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './CatModal.css'
 import Vector from '../../../assets/vector.png'
 
 function CatModal({ close }) {
+
+    const fileInputRef = useRef(null)
+
+    const handleButtonClick = () => [
+        fileInputRef.current.click()
+    ]
+
     return (
         <div className="categories-modal">
             <div className="categories-modal-wrap">
                 <div className="categories-modal-head">
                     <div className="categories-modal-item">
                         <h1 className="categories-modal-title">Create category</h1>
-                        <button onClick={() => close()}>Close</button>
+                        <button className='categories-modal-close' onClick={() => close()}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg></button>
                     </div>
                     <div className="categories-modal-product">
                         <div className="categories-modal-img">
@@ -17,7 +26,15 @@ function CatModal({ close }) {
                         </div>
                         <div className='categories-modal-input'>
                             <input className='cat-input' type="text" placeholder="Name" />
-                            <input className='cat-input' type="none" placeholder="Select Logo" />
+                            <input
+                                ref={fileInputRef}
+                                type="file"
+                                className='cat-input'
+                                onChange={event => {
+                                        const selectedFile = event.target.files[0];
+                                    console.log(selectedFile);
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
