@@ -68,7 +68,7 @@ function Modal({ close }) {
                 <div className="user-access">
                     <h1 className='modal-title'>User Access</h1>
                     <div className="user-access-wrap">
-                        <input className="modal-active" type="password" placeholder="New Password" />
+                        <input ref={passwordRef} className="modal-active" type="password" placeholder="New Password" />
                         <input className="modal-active" type="password" placeholder="Retype Password" />
                         <div className="modal-select">
                             <select className='modal-active'>
