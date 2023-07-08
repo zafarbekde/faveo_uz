@@ -1,0 +1,15 @@
+.product-container{
+    width: 100%;
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: crimson;
+}
+
+.product-head{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
