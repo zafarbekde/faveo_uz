@@ -5,11 +5,18 @@
     background-color: crimson;
 }
 
+
+
 .product-head{
     width: 100%;
     background-color: aqua;
     display: flex;
-    padding: 20px;
+    padding: 20px 33px;
     align-items: center;
     justify-content: space-between;
+}
+
+.product-header-filter{
+    background-color: aliceblue;
+    padding: 33px;
 }
