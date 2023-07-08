@@ -1,7 +1,8 @@
 import React from 'react'
 import './products.css'
+import Pen from '../../assets/pen.png'
 
-function Products() {
+function Products({ image, name, price, category }) {
   return (
     <div className='product-container'>
       <div className="product-wrapper">
@@ -12,7 +13,7 @@ function Products() {
           </div>
 
           <div className="product-header-filter">
-            <select className='modal-active product-filter-categories'> 
+            <select className='modal-active product-filter-categories'>
               <option value="1">By Categories</option>
               <option value="2">Eng Oxirgi</option>
               <option value="3">Eng Yangi </option>
@@ -24,6 +25,20 @@ function Products() {
               <option value="3">By Popular</option>
               <option value="4">By Rate</option>
             </select>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <div className="card">
+            <div className="card-category">{category}</div>
+            <img className="card-image" src={image} alt={name} />
+            <div className="card-details">
+              <div className="product-details">
+                <h2 className="card-name">{name}</h2>
+                <p className="card-price">${price}</p>
+              </div>
+              <button className="card-button"><img className='card-product-img' src={Pen} /> Edit</button>
+            </div>
           </div>
         </div>
       </div>

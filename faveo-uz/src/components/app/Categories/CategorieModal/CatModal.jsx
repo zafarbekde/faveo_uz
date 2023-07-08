@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './CatModal.css';
 import Vector from '../../../assets/vector.png';
 
-function CatModal({ close }) {
-  const fileInputRef = useRef(null);
+function CatModal({ close, onSave }) {
+  const [name, setName] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageChange = (event) => {
@@ -11,8 +11,9 @@ function CatModal({ close }) {
     setSelectedImage(URL.createObjectURL(selectedFile));
   };
 
-  const handleButtonClick = () => {
-    fileInputRef.current.click();
+  const handleSave = () => {
+    onSave({ name, selectedImage });
+    close();
   };
 
   return (
@@ -32,9 +33,14 @@ function CatModal({ close }) {
               <img className='categories-modal-image' src={selectedImage || Vector} alt='Selected Image' />
             </div>
             <div className='categories-modal-input'>
-              <input className='cat-input' type="text" placeholder="Name" />
               <input
-                ref={fileInputRef}
+                className='cat-input'
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+              />
+              <input
                 type="file"
                 className='cat-input'
                 onChange={handleImageChange}
@@ -44,7 +50,7 @@ function CatModal({ close }) {
         </div>
         <div className="categories-modal-button">
           <button className='login-btn categories-modal-delete'>Delete</button>
-          <button className='login-btn categories-modal-save'>Save Changes</button>
+          <button className='login-btn categories-modal-save' onClick={handleSave}>Save Changes</button>
         </div>
       </div>
     </div>

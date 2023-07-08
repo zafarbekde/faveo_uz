@@ -70,3 +70,8 @@
     width: 49px;
     height: 26px;
 }
+
+.categories-product-img{
+    width: 50px;
+    border-radius: 5px;
+}

@@ -1,5 +1,4 @@
 import './categories.css'
-import Vector from '../../assets/vector.png'
 import Pen from '../../assets/pen.png'
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -8,19 +7,12 @@ import CatModal from './CategorieModal/CatModal'
 function Categories() {
 
   const [showModal, setShowModal] = useState(false);
+  const [categoryInfo, setCategoryInfo] = useState(null)
 
-  const items = [
-    { id: 1, title: 'Food', image: Vector, button: Pen },
-    { id: 2, title: 'Food', image: Vector, button: Pen },
-    { id: 3, title: 'Food', image: Vector, button: Pen },
-    { id: 4, title: 'Food', image: Vector, button: Pen },
-    { id: 5, title: 'Food', image: Vector, button: Pen },
-    { id: 6, title: 'Food', image: Vector, button: Pen },
-    { id: 7, title: 'Food', image: Vector, button: Pen },
-    { id: 8, title: 'Food', image: Vector, button: Pen },
-    { id: 9, title: 'Food', image: Vector, button: Pen },
-    { id: 10, title: 'Food', image: Vector, button: Pen },
-  ]
+  const handleSaveModal = (info) => {
+    setCategoryInfo(info);
+  };
+
 
   return (
     <>
@@ -32,25 +24,26 @@ function Categories() {
           </div>
 
           <div className="categories-product">
-            {items.map((item) => (
-              <div key={item.id} className="categories-product-head">
+
+            {categoryInfo && (
+              <div className="categories-product-head">
                 <div className='prosta-div'>
-                  <img className='categories-product-img' src={item.image} />
-                  <span className="categories-product-title">{item.title}</span>
+                  <img className='categories-product-img' src={categoryInfo.selectedImage} />
+                  <span className="categories-product-title">{categoryInfo.name}</span>
                 </div>
                 <div className="categories-button">
-                  <button onClick={() => setShowModal(true)} className='login-btn categories-active'><img src={item.button} /></button>
+                  <button onClick={() => setShowModal(true)} className='login-btn categories-active'><img src={Pen} /></button>
                 </div>
               </div>
+            )}
 
 
-            ))}
           </div>
         </div>
       </div>
 
       {
-        showModal && createPortal(<CatModal close={() => setShowModal(false)} />, document.getElementById("modal-root"))
+        showModal && createPortal(<CatModal onSave={handleSaveModal} close={() => setShowModal(false)} />, document.getElementById("modal-root"))
       }
     </>
   )
