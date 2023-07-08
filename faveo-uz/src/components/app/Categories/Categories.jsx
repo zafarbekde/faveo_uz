@@ -34,8 +34,10 @@ function Categories() {
           <div className="categories-product">
             {items.map((item) => (
               <div key={item.id} className="categories-product-head">
-                <img className='categories-product-img' src={item.image} />
-                <span className="categories-product-title">{item.title}</span>
+                <div className='prosta-div'>
+                  <img className='categories-product-img' src={item.image} />
+                  <span className="categories-product-title">{item.title}</span>
+                </div>
                 <div className="categories-button">
                   <button onClick={() => setShowModal(true)} className='login-btn categories-active'><img src={item.button} /></button>
                 </div>

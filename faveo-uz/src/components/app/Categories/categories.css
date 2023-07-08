@@ -45,7 +45,18 @@
     gap: 30px;
 }
 
-.categories-product-head{
+.categories-product-head {
+    width: 290px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #fbfbfb;
+    gap: 15px;
+}
+
+.prosta-div{
     display: flex;
     align-items: center;
     justify-content: center;
