@@ -19,4 +19,7 @@
 .product-header-filter{
     background-color: aliceblue;
     padding: 33px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }

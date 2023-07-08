@@ -12,13 +12,13 @@ function Products() {
           </div>
 
           <div className="product-header-filter">
-            <select className='product-filter-categories'> 
+            <select className='modal-active product-filter-categories'> 
               <option value="1">By Categories</option>
               <option value="2">Eng Oxirgi</option>
               <option value="3">Eng Yangi </option>
             </select>
 
-            <select className='product-filter-name'>
+            <select className='modal-active product-filter-name'>
               <option value="1">By Name</option>
               <option value="2">By Price</option>
               <option value="3">By Popular</option>
