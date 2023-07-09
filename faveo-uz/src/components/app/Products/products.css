@@ -29,6 +29,7 @@
 }
 
 .card {
+    position: relative;
     width: 300px;
     background-color: #fbfbfb;
     border-radius: 8px;
@@ -36,9 +37,16 @@
 }
 
 .card-category {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 8px;
+    position: absolute;
+    background-color: crimson;
+    display: flex;
+    width: 66px;
+    height: 22px;
+    right: 0;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
 }
 
 .card-image {
@@ -47,7 +55,7 @@
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 8px;
-    background: url(../../assets/burger.png);  
+    background: url(../../assets/burger.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -57,7 +65,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding:15px;
+    padding: 15px;
 }
 
 .product-details {

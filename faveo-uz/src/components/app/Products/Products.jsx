@@ -30,7 +30,9 @@ function Products({ image, name, price, category }) {
 
         <div className="product-card">
           <div className="card">
-            <div className="card-category">{category}</div>
+            <div className="card-category">
+                
+            </div>
             <img className="card-image" src={image} alt={name} />
             <div className="card-details">
               <div className="product-details">
