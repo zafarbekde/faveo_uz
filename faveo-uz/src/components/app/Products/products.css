@@ -44,10 +44,24 @@
     height: 22px;
     top: 10px;
     right: 10px;
-    padding: 10px 20px;
+    padding: 10px;
     align-items: center;
     gap: 5px;
     border-radius: 5px;
+}
+
+.card-category-title {
+    color: #7E7E7E;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card-category-img {
+    width: 15px;
+    height: 15px;
 }
 
 .card-image {
@@ -56,10 +70,6 @@
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 8px;
-    background: url(../../assets/burger.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
 }
 
 .card-details {

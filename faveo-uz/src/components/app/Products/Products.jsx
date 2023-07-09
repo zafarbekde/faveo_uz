@@ -1,8 +1,8 @@
-import React from 'react'
-import './products.css'
-import Pen from '../../assets/pen.png'
+import React from 'react';
+import './products.css';
+import Pen from '../../assets/pen.png';
 
-function Products({ image, name, price, category }) {
+function Products({ image, name, price }) {
   return (
     <div className='product-container'>
       <div className="product-wrapper">
@@ -31,21 +31,22 @@ function Products({ image, name, price, category }) {
         <div className="product-card">
           <div className="card">
             <div className="card-category">
-                
+              <img className='card-category-img' src={image} />
+              <span className='card-category-title' >{name}</span>
             </div>
-            <img className="card-image" src={image} alt={name} />
+            <img className="card-image" src={"image"}  />
             <div className="card-details">
               <div className="product-details">
-                <h2 className="card-name">{name}</h2>
+                <h2 className="card-name">{""}</h2>
                 <p className="card-price">${price}</p>
               </div>
-              <button className="card-button"><img className='card-product-img' src={Pen} /> Edit</button>
+              <button className="card-button"><img className='card-product-img' src={Pen} alt="Edit" /> Edit</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Products
+export default Products;
