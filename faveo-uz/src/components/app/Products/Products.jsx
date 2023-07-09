@@ -13,8 +13,10 @@ function Product({ product }) {
         )}
         <span className='card-category-title'>{name}</span>
       </div>
-      {selectedImage && (
+      {selectedImage ? (
         <img className="card-image" src={selectedImage} alt={name} />
+      ) : (
+        <div className="card-image-placeholder">No Image</div>
       )}
       <div className="card-details">
         <div className="product-details">
