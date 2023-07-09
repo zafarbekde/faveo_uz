@@ -38,7 +38,7 @@
 
 .card-category {
     position: absolute;
-    background-color: crimson;
+    background-color: #f1f1f1;
     display: flex;
     width: 66px;
     height: 22px;
