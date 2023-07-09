@@ -9,7 +9,7 @@
 
 .product-head {
     width: 100%;
-    background-color: aqua;
+    background-color: #fff;
     display: flex;
     padding: 20px 33px;
     align-items: center;
@@ -17,7 +17,7 @@
 }
 
 .product-header-filter {
-    background-color: aliceblue;
+    background-color: #fff;
     padding: 33px;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
 
 .card {
     width: 300px;
-    background-color: #fff;
+    background-color: #fbfbfb;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -47,14 +47,17 @@
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 8px;
+    background: url(../../assets/burger.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .card-details {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    background-color: aliceblue;
+    padding:15px;
 }
 
 .product-details {
