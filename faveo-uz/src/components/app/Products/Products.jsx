@@ -3,13 +3,18 @@ import './products.css';
 import Pen from '../../assets/pen.png';
 
 function Products({ image, name, price }) {
+  const [showModal, setShowModal] = useState(false);
+  const handleSaveProduct = (info) => {
+    setCategories([...categories, info]);
+  };
+
   return (
     <div className='product-container'>
       <div className="product-wrapper">
         <div className="product-header">
           <div className="product-head">
             <h1 className='product-header-title'>Product</h1>
-            <button className='login-btn product-header-button'>Create-Product</button>
+            <button onClick={() => setShowModal(true)} className='login-btn product-header-button'>Create-Product</button>
           </div>
 
           <div className="product-header-filter">
@@ -45,6 +50,7 @@ function Products({ image, name, price }) {
           </div>
         </div>
       </div>
+      {showModal && <ProductModal onSave={handleSaveProduct} close={() => setShowModal(false)}/>}
     </div>
   );
 }
