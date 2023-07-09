@@ -53,7 +53,7 @@ function Products({ image, name, price }) {
           </div>
         </div>
       </div>
-      {showModal && createPortal(<ProductModal onSave={handleSaveCategory} close={() => setShowModal(false)} />, document.getElementById("modal-root"))}
+      {showModal && createPortal(<ProductModal onSave={handleSaveProduct} close={() => setShowModal(false)} />, document.getElementById("modal-root"))}
     </div>
   );
 }
