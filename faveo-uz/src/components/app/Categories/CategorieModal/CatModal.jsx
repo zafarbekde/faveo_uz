@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './CatModal.css';
 import Vector from '../../../assets/vector.png';
 
@@ -12,23 +12,9 @@ function CatModal({ close, onSave }) {
   };
 
   const handleSave = () => {
-    const category = {
-      name,
-      selectedImage
-    };
-
-    localStorage.setItem('category', JSON.stringify(category));
-
-    close()
+    onSave({ name, selectedImage });
+    close();
   };
-
-  useEffect(() => {
-    const savedCategory = localStorage.getItem('category');
-    if(savedCategory) {
-      const category  = JSON.parse(savedCategory)
-      selectedImage(category.selectedImage)
-    }
-  }, [])
 
   return (
     <div className="categories-modal">

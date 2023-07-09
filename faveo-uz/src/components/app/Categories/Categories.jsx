@@ -9,7 +9,7 @@ function Categories() {
   const [showModal, setShowModal] = useState(false);
   const [categoryInfo, setCategoryInfo] = useState(null)
 
-  const handleSaveModal = (info) => {
+  const handleSaveCategory  = (info) => {
     setCategoryInfo(info);
   };
 
@@ -43,7 +43,7 @@ function Categories() {
       </div>
 
       {
-        showModal && createPortal(<CatModal onSave={handleSaveModal} close={() => setShowModal(false)} />, document.getElementById("modal-root"))
+        showModal && createPortal(<CatModal onSave={handleSaveCategory} close={() => setShowModal(false)} />, document.getElementById("modal-root"))
       }
     </>
   )
