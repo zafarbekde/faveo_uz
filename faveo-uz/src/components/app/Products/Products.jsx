@@ -3,15 +3,19 @@ import './products.css';
 import Pen from '../../assets/pen.png';
 
 function Product({ product }) {
-  const { selectedImage, name, price } = product;
+  const { selectedImage, name, price } = product || {}; // Assign an empty object as the default value
 
   return (
     <div className='card'>
       <div className="card-category">
-        <img className='card-category-img' src={selectedImage} alt={name} />
+        {selectedImage && (
+          <img className='card-category-img' src={selectedImage} alt={name} />
+        )}
         <span className='card-category-title'>{name}</span>
       </div>
-      <img className="card-image" src={selectedImage} alt={name} />
+      {selectedImage && (
+        <img className="card-image" src={selectedImage} alt={name} />
+      )}
       <div className="card-details">
         <div className="product-details">
           <h2 className="card-name">{name}</h2>
