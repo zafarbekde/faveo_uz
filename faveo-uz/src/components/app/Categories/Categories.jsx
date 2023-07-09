@@ -1,14 +1,13 @@
-import './categories.css'
-import Pen from '../../assets/pen.png'
-import React, { useEffect, useState } from 'react';
+import './categories.css';
+import Pen from '../../assets/pen.png';
+import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
-import CatModal from './CategorieModal/CatModal'
-import Products from '../Products/Products';
+import CatModal from './CategorieModal/CatModal';
+import Product from '../Products/Products';
 
 function Categories() {
-
   const [showModal, setShowModal] = useState(false);
-  const [categoryInfo, setCategoryInfo] = useState(null)
+  const [categoryInfo, setCategoryInfo] = useState(null);
 
   const handleSaveCategory = (info) => {
     setCategoryInfo(info);
@@ -41,11 +40,13 @@ function Categories() {
 
       {showModal && createPortal(<CatModal onSave={handleSaveCategory} close={() => setShowModal(false)} />, document.getElementById("modal-root"))}
 
-      {/* Render Products component and pass categoryInfo as props */}
-      <Products
-        image={categoryInfo && categoryInfo.selectedImage}
-        name={categoryInfo && categoryInfo.name}
-      />
+      {categoryInfo && (
+        <Product
+          image={categoryInfo.selectedImage}
+          name={categoryInfo.name}
+          price="" // Provide the price for the category
+        />
+      )}
     </>
   );
 }
