@@ -1,6 +1,9 @@
-import React from 'react';
+
 import './products.css';
 import Pen from '../../assets/pen.png';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+import ProductModal from './ProductModal/ProductModal';
 
 function Products({ image, name, price }) {
   const [showModal, setShowModal] = useState(false);
@@ -50,7 +53,7 @@ function Products({ image, name, price }) {
           </div>
         </div>
       </div>
-      {showModal && <ProductModal onSave={handleSaveProduct} close={() => setShowModal(false)}/>}
+      {showModal && createPortal(<CatModal onSave={handleSaveCategory} close={() => setShowModal(false)} />, document.getElementById("modal-root"))}
     </div>
   );
 }

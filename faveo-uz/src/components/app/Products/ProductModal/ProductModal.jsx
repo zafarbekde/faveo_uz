@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './productmodal.css';
 import Vector from '../../../assets/vector.png';
 
-function CatModal({ close, onSave }) {
+function ProductModal({ close, onSave }) {
   const [name, setName] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -57,4 +57,4 @@ function CatModal({ close, onSave }) {
   );
 }
 
-export default CatModal;
+export default ProductModal;
