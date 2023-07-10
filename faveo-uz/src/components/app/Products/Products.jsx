@@ -48,7 +48,7 @@ function Products({ image, name, price }) {
                 <h2 className="card-name">{""}</h2>
                 <p className="card-price">${price}</p>
               </div>
-              <button className="card-button"><img className='card-product-img' src={Pen} alt="Edit" /> Edit</button>
+              <button onClick={() => setShowModal(true)} className="card-button"><img className='card-product-img' src={Pen} alt="Edit" /> Edit</button>
             </div>
           </div>
         </div>
