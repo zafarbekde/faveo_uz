@@ -1,0 +1,32 @@
+.orders-container {
+    display: flex;
+  }
+  
+  .manage-container {
+    flex: 1;
+  }
+  
+  .sidebar {
+    flex: 0 0 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .sidebar-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-link:hover {
+    color: #666;
+  }
+  
