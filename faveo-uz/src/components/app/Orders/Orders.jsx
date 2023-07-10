@@ -8,6 +8,7 @@ function Orders() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -38,9 +39,13 @@ function Orders() {
     return <div>Error occurred while fetching users.</div>;
   }
 
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
   return (
     <div className="orders-container">
-      <div className="sidebar">
+      <div className={`sidebar${showSidebar ? ' show' : ''}`}>
         <h2 className="sidebar-title">Sidebar</h2>
         <a href="#" className="sidebar-link">Link 1</a>
         <a href="#" className="sidebar-link">Link 2</a>
@@ -94,6 +99,9 @@ function Orders() {
       </div>
 
       {showModal && createPortal(<Modal close={() => setShowModal(false)} />, document.getElementById("modal-root"))}
+      <button className="toggle-sidebar-btn" onClick={toggleSidebar}>
+        Toggle Sidebar
+      </button>
     </div>
   );
 }
