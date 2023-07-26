@@ -41,6 +41,7 @@ function Login() {
                             Login
                         </button>
                         <Link to={"/Register"}><button className="login-btn active">Register</button></Link>
+                        <Link to={"/home"}><button className="login-btn active">Home</button></Link>
                     </div>
                 </div>
             </div>

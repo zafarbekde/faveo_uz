@@ -25,6 +25,7 @@ function Products({ image, name, price }) {
               <option value="1">By Categories</option>
               <option value="2">Eng Oxirgi</option>
               <option value="3">Eng Yangi </option>
+              <option value="3">Eng Sara </option>
             </select>
 
             <select className='modal-active product-filter-name'>
@@ -32,6 +33,7 @@ function Products({ image, name, price }) {
               <option value="2">By Price</option>
               <option value="3">By Popular</option>
               <option value="4">By Rate</option>
+              <option value="4">By View</option>
             </select>
           </div>
         </div>
@@ -42,13 +44,15 @@ function Products({ image, name, price }) {
               <img className='card-category-img' src={image} />
               <span className='card-category-title' >{name}</span>
             </div>
-            <img className="card-image" src={"image"}  />
+            <img className="card-image" src={"image"} />
             <div className="card-details">
               <div className="product-details">
                 <h2 className="card-name">{""}</h2>
                 <p className="card-price">${price}</p>
               </div>
-              <button onClick={() => setShowModal(true)} className="card-button"><img className='card-product-img' src={Pen} alt="Edit" /> Edit</button>
+              <div className="button-flex-btn">
+                <button onClick={() => setShowModal(true)} className="card-button"><img className='card-product-img' src={Pen} alt="Edit" /> Edit</button>
+              </div>
             </div>
           </div>
         </div>

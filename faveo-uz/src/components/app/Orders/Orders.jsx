@@ -36,7 +36,7 @@ function Orders() {
   }
 
   if (isError) {
-    return <div>Error occurred while fetching users.</div>;
+    return <div>Error occurred while fetching u sers.</div>;
   }
 
   const toggleSidebar = () => {
@@ -66,14 +66,14 @@ function Orders() {
                   <th>Name</th>
                   <th>Username</th>
                   <th>Email</th>
-                  <th>Birthday</th>
+                  <th>Birthday</th> 
                   <th>Phone</th>
                   <th>Role</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-                {users.map((user) => (
+                {users.map((user) => (   
                   <tr key={user.id} className="manage-table-item">
                     <td>{user.id}</td>
                     <td>{user.name}</td>
